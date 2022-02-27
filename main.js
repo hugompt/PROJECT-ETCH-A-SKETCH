@@ -18,22 +18,21 @@ function newGrid(columns,rows){
         document.getElementById('mainGrid').appendChild(row);
     }
     switch (columns) {
-        case 16:
-
+        case "16":
             break;
-        case 17:
-        case 18:
-        case 19:
+        case "17":
+        case "18":
+        case "19":
             $('.bottomCont').css('margin-bottom', '0');
             break;
-        case 20:
-        case 21:
+        case "20":
+        case "21":
             $('.bottomCont').css('margin-bottom', '-2%');
             break;
-        case 22:
-        case 23:
-        case 24:
-        case 25:
+        case "22":
+        case "23":
+        case "24":
+        case "25":
             $('.bottomCont').css('margin-bottom', '-5%');
             break;
     }
@@ -42,23 +41,36 @@ function newGrid(columns,rows){
 //Function to prompt the user the grid size to draw
 function gridSizePrompt(){
     const gridSize = Swal.fire({
-    title: 'Choose a number of rows + columns for the new grid:',
-    icon: 'question',
-    input: 'range',
-    confirmButtonColor: 'green',
-    inputAttributes: {
-      min: 16,
-      max: 25,
-      step: 1
-    },
-    inputValue: 20
-  })
+        title: 'Choose a number of rows + columns for the new grid:',
+        icon: 'question',
+        input: 'range',
+        confirmButtonColor: 'green',
+        inputAttributes: {
+            min: 16,
+            max: 25,
+            step: 1
+        },
+        inputValue: 20
+    }).then(function (){
+        const inputRange = Swal.getInput();
+
+        let rowsTotal = inputRange.value;
+        localStorage.setItem("numbRows", rowsTotal);
+
+        let columnsTotal = inputRange.value;
+        localStorage.setItem("numbColumns", columnsTotal);
+
+        location.reload();
+    });
+
   console.log($(gridSize));
   
 }
 //On load of the page call a function to create the grid
 window.onload = function(){
-    newGrid(20,20);   
+    console.log(localStorage.getItem("numbRows"));
+    console.log(localStorage.getItem("numbColumns"));
+    newGrid(localStorage.getItem("numbRows"),localStorage.getItem("numbColumns"));   
 }
 
 //Check is page is ready to run code
@@ -91,7 +103,6 @@ $(document).ready(function(){
 
     //Action if the user clicks the change grid size button
     document.getElementById("sizeGrid").onclick = function() {
-        console.log("i was clicked");
         gridSizePrompt();
     };
 })

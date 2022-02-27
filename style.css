@@ -131,9 +131,8 @@ html{
 }
 
 .leftControls{
-    border: 60px solid white;
-    border-radius: 100%;
-    box-shadow: 0 2px 18px 0 #ecbe03, 0 2px 50px 0 #ecbe03;
+    border: 30px transparent;
+    font-size: 50px;
 }
 
 .rightControls{
