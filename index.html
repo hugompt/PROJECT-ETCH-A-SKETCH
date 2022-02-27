@@ -10,6 +10,10 @@
     <script type="text/javascript" src="./main.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/265f5fda5f.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module">
+      import Swal from 'https://cdn.jsdelivr.net/npm/sweetalert2@11/src/sweetalert2.js'
+    </script>
 </head>
 <body>
 
@@ -22,11 +26,12 @@
             <div id="mainGrid" class="gridCont">
             </div>
         </div>
-        <div class="eraser eraserShadow"></div>
-        <div class="eraser">🚨 erase 🚨</div>
-        <div class="leftControls"></div>
-        <div class="rightControls"><button class="gridSize">CHANGE GRID SIZE</button></div>
-    </div>
+        <div class="bottomCont">
+            <div class="leftControls"></div>
+            <div class="eraser">🚨 erase 🚨</div>
+            <div class="rightControls"><button id="sizeGrid" class="gridSize">CHANGE GRID SIZE</button></div>
+        </div>
+        </div>
 
     <div class="space">
         <div class="particle"></div>

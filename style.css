@@ -69,16 +69,13 @@ html{
     height: 2px;
   }
 
-
-.mainCont{
-    display:flex;
-    justify-content: center;
-    margin-top:10%;
-}
-
 .title{
+    /* position: absolute;
+    transform: translateY(10px); */
     position: absolute;
-    transform: translateY(10px);
+    left: 0; top: 0; right: 0; bottom: 90%;
+    display: flex;
+    justify-content: center;
     color: white;
     font-size: 50px;
     font-weight:700;
@@ -87,24 +84,32 @@ html{
 
 .mainCont{
     position: relative;
-    z-index: 10;
+    display:flex;
+    justify-content: center;
+    margin-top:5%;
+    overflow: scroll;
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-direction: column;
+    z-index: 1;
 }
 .gameBorder{
+    display: flex;
     border: 100px solid red;
+    left: 500px; top: 0; right: 80%;
     border-bottom: 200px solid red;
     border-radius: 10%;
+    margin: auto auto;
 }
 .gridCont { 
     display: flex;
-    justify-content: center;
-    grid-gap: 0;
     grid-template-columns: repeat(16, auto);
     box-shadow: 0 1px 5px 0 #000000, 0 1px 5px 0 #000000; 
 }
 
 .eraser{
-    position: absolute;
-    transform: translate(0, 650px);
+    /* position: absolute;
+    transform: translate(0, 650px); */
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -125,13 +130,9 @@ html{
     box-shadow: 0 5px 18px 0 #ecbe03, 0 5px 50px 0 #ecbe03;
 }
 
-.eraserShadow{
-    box-shadow: 0 2px 18px 0 #ecbe03, 0 2px 50px 0 #ecbe03;
-}
-
 .leftControls{
-    position: absolute;
-    transform: translate(-250px, 610px);
+    /* position: absolute;
+    transform: translate(-250px, 610px); */
     border: 70px solid white;
     border-radius: 100%;
     box-shadow: 0 2px 18px 0 #ecbe03, 0 2px 50px 0 #ecbe03;
@@ -139,8 +140,8 @@ html{
 
 .rightControls{
     /* border: 70px solid white; */
-    position: absolute;
-    transform: translate(250px, 610px);
+    /* position: absolute; */
+    /* transform: translate(250px, 610px); */
     border-radius: 100%;
     /* box-shadow: 0 2px 18px 0 #ecbe03, 0 2px 50px 0 #ecbe03; */
 }
@@ -167,9 +168,18 @@ html{
     font-size: x-large;
 }
 
-
+.bottomCont{
+    position: absolute;
+    left: 25%; top: 80%; right: 25%; bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    margin: auto auto;
+    justify-content: center;
+}
 /* FOOTER */
 .footer{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: grey;
     bottom:0;
     left: 0;
@@ -179,6 +189,7 @@ html{
     padding: 15px;
     position: absolute;
     text-align: center;
+    z-index: 2;
     }
 .fa-github {
     color: greenyellow;

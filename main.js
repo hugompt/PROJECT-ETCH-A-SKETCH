@@ -1,8 +1,12 @@
 //Function to create the default grid with JS
-function defaultGrid(){
-    let columns = 16;
-    let rows = 16;
+function newGrid(columns,rows){
 
+    if(columns === undefined || rows === undefined){
+        columns = 16;
+        rows = 16;
+    } 
+    console.log(rows);
+    console.log(columns);
     for (let i = 0; i < rows; i++) {
         let row = document.createElement('div');
         row.id = "cellRow_" + i;
@@ -18,10 +22,26 @@ function defaultGrid(){
 
 }
 
-
+//Function to prompt the user the grid size to draw
+function gridSizePrompt(){
+    const gridSize = Swal.fire({
+    title: 'Please choose the number of squares per row for the new grid',
+    icon: 'question',
+    input: 'range',
+    confirmButtonColor: 'green',
+    inputAttributes: {
+      min: 16,
+      max: 20,
+      step: 1
+    },
+    inputValue: 16
+  })
+  console.log($(gridSize));
+  
+}
 //On load of the page call a function to create the grid
 window.onload = function(){
-    defaultGrid();   
+    newGrid(20,20);   
 }
 
 //Check is page is ready to run code
@@ -51,5 +71,16 @@ $(document).ready(function(){
     $('.eraser').on('mousedown', (function(){
         $('.cell').css('background-color', 'white');
     }));
+
+    //Action if the user clicks the change grid size button
+    document.getElementById("sizeGrid").onclick = function() {
+        console.log("i was clicked");
+        gridSizePrompt();
+    };
+
+    //
+    // $(".mainCont").css({
+    //     'width': ($(".first_div").width() + 'px')
+    //   });
 })
 
