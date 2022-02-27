@@ -1,15 +1,26 @@
 html{
     background-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .mainCont{
     display:flex;
     justify-content: center;
-    margin-top:25%;
+    margin-top:10%;
+}
+
+.title{
+    position: absolute;
+    transform: translateY(30px);
+    color: white;
+    font-size: xx-large;
+    font-weight:700;
+    text-shadow: 3px 3px #ecbe03;
 }
 
 .gameBorder{
     border: 100px solid red;
+    border-bottom: 200px solid red;
     border-radius: 10%;
 }
 .gridCont { 
@@ -20,6 +31,43 @@ html{
  
 }
 
+.eraser{
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(0, 650px);
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    border: 10px solid white;
+    border-radius: 5%;
+    text-align: center;
+    font-size: large;
+    text-transform: uppercase;
+    text-shadow: 1px 1px #ecbe03;
+}
+
+.eraserShadow{
+    box-shadow: 0 2px 18px 0 #ecbe03, 0 2px 50px 0 #ecbe03;
+}
+
+.leftControls{
+    position: absolute;
+    transform: translate(-250px, 610px);
+    border: 70px solid white;
+    border-radius: 100%;
+    box-shadow: 0 2px 18px 0 #ecbe03, 0 2px 50px 0 #ecbe03;
+}
+
+.rightControls{
+    border: 70px solid white;
+    position: absolute;
+    transform: translate(250px, 610px);
+    border-radius: 100%;
+    box-shadow: 0 2px 18px 0 #ecbe03, 0 2px 50px 0 #ecbe03;
+}
 .cell {
     background: white;
     width: 30px;
@@ -31,5 +79,22 @@ html{
 
 
 .footer{
+    background-color: grey;
     bottom:0;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    padding: 15px;
+    position: absolute;
+    text-align: center;
+    }
+.fa-github {
+    color: greenyellow;
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out;
+    margin-left: 5px;
+}
+
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.5);
 }
