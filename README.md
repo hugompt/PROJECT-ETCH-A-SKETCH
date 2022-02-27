@@ -6,7 +6,11 @@ PROJECT-ETCH-A-SKETCH
 - - - -
 Hello there! 👋
 
-🚧 WORK IN PROGRESS 🚧
+This is a Etch-a-Sketch online version! </br>
+A very simply grid to draw on when holding down the mouse ✏️ </br>
+You can erase the board and resize it.</br>
+
+Have fun!</br>
 
 - - - -
 Hugo
