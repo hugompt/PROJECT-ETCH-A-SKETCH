@@ -22,5 +22,20 @@ function defaultGrid(){
 
 window.onload = function(){
     defaultGrid();
+
+    // $(function() {
+    //     $('.cell').hover( function(){
+    //        $(this).css('background-color', 'black');
+    //     },
+    //     function(){
+    //        $(this).css('background-color', 'white');
+    //     });
+    //  });
+
+     let timeoutId = 0;
+     $('.cell').on('mousedown', function() {
+        $(this).css('background-color', 'black');
+    });
+     
 }
 
