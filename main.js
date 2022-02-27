@@ -68,9 +68,13 @@ function gridSizePrompt(){
 }
 //On load of the page call a function to create the grid
 window.onload = function(){
-    console.log(localStorage.getItem("numbRows"));
-    console.log(localStorage.getItem("numbColumns"));
-    newGrid(localStorage.getItem("numbRows"),localStorage.getItem("numbColumns"));   
+    if (localStorage.getItem("numbRows") ||
+            localStorage.getItem("numbColumns") == undefined){
+                newGrid(20,20);   
+    }else{
+        newGrid(localStorage.getItem("numbRows"),
+        localStorage.getItem("numbColumns")); 
+    }    
 }
 
 //Check is page is ready to run code
