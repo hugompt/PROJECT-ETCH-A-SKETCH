@@ -1,6 +1,6 @@
 html{
     background-color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Bradley Hand, cursive, sans-serif;
 }
 
 
@@ -80,7 +80,6 @@ html{
     position: absolute;
     transform: translateY(10px);
     color: white;
-    font-family: Bradley Hand, cursive, sans-serif;
     font-size: 50px;
     font-weight:700;
     text-shadow: 1px 1px #ecbe03;
@@ -116,12 +115,12 @@ html{
     border: 10px solid white;
     border-radius: 5%;
     text-align: center;
-    font-size: large;
+    font-size:xx-large;
     text-transform: uppercase;
     text-shadow: 1px 1px #ecbe03;
 }
 
-.eraser:hover{
+.eraser:hover,.gridSize:hover{
     text-shadow: 2px 2px #ecbe03;
     box-shadow: 0 5px 18px 0 #ecbe03, 0 5px 50px 0 #ecbe03;
 }
@@ -139,11 +138,11 @@ html{
 }
 
 .rightControls{
-    border: 70px solid white;
+    /* border: 70px solid white; */
     position: absolute;
     transform: translate(250px, 610px);
     border-radius: 100%;
-    box-shadow: 0 2px 18px 0 #ecbe03, 0 2px 50px 0 #ecbe03;
+    /* box-shadow: 0 2px 18px 0 #ecbe03, 0 2px 50px 0 #ecbe03; */
 }
 .cell {
     background: white;
@@ -153,8 +152,23 @@ html{
     cursor: pointer;
 }
 
+.gridSize{
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 50%;
+    padding: 10%;
+    height: 150px;
+    width: 150px;
+    align-items: center;
+    box-shadow: 0 2px 18px 0 #ecbe03, 0 2px 50px 0 #ecbe03;
+    border: 0;
+    cursor: pointer;
+    font-family: Bradley Hand, cursive, sans-serif;
+    font-size: x-large;
+}
 
 
+/* FOOTER */
 .footer{
     background-color: grey;
     bottom:0;
