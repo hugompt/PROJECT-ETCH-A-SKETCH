@@ -85,8 +85,9 @@ html{
 .mainCont{
     position: relative;
     display:flex;
+    margin-top: 100px;
     justify-content: center;
-    margin-top:5%;
+
     overflow: scroll;
     flex-shrink: 0;
     flex-grow: 0;
@@ -122,6 +123,7 @@ html{
     text-align: center;
     font-size:xx-large;
     text-transform: uppercase;
+    white-space: nowrap;
     text-shadow: 1px 1px #ecbe03;
 }
 
@@ -172,6 +174,7 @@ html{
     position: absolute;
     left: 25%; top: 80%; right: 25%; bottom: 0;
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     gap: 100px;
     margin: auto auto;
