@@ -2,11 +2,9 @@
 function newGrid(columns,rows){
 
     if(columns === undefined || rows === undefined){
-        columns = 16;
-        rows = 16;
+        columns = 20;
+        rows = 20;
     } 
-    console.log(rows);
-    console.log(columns);
     for (let i = 0; i < rows; i++) {
         let row = document.createElement('div');
         row.id = "cellRow_" + i;
@@ -19,22 +17,41 @@ function newGrid(columns,rows){
         }              
         document.getElementById('mainGrid').appendChild(row);
     }
+    switch (columns) {
+        case 16:
 
+            break;
+        case 17:
+        case 18:
+        case 19:
+            $('.bottomCont').css('margin-bottom', '0');
+            break;
+        case 20:
+        case 21:
+            $('.bottomCont').css('margin-bottom', '-2%');
+            break;
+        case 22:
+        case 23:
+        case 24:
+        case 25:
+            $('.bottomCont').css('margin-bottom', '-5%');
+            break;
+    }
 }
 
 //Function to prompt the user the grid size to draw
 function gridSizePrompt(){
     const gridSize = Swal.fire({
-    title: 'Please choose the number of squares per row for the new grid',
+    title: 'Choose a number of rows + columns for the new grid:',
     icon: 'question',
     input: 'range',
     confirmButtonColor: 'green',
     inputAttributes: {
       min: 16,
-      max: 20,
+      max: 25,
       step: 1
     },
-    inputValue: 16
+    inputValue: 20
   })
   console.log($(gridSize));
   
@@ -77,10 +94,5 @@ $(document).ready(function(){
         console.log("i was clicked");
         gridSizePrompt();
     };
-
-    //
-    // $(".mainCont").css({
-    //     'width': ($(".first_div").width() + 'px')
-    //   });
 })
 

@@ -70,14 +70,13 @@ html{
   }
 
 .title{
-    /* position: absolute;
-    transform: translateY(10px); */
     position: absolute;
     left: 0; top: 0; right: 0; bottom: 90%;
     display: flex;
     justify-content: center;
+    align-items: center;
     color: white;
-    font-size: 50px;
+    font-size: 40px;
     font-weight:700;
     text-shadow: 1px 1px #ecbe03;
 }
@@ -85,20 +84,21 @@ html{
 .mainCont{
     position: relative;
     display:flex;
-    margin-top: 100px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
     justify-content: center;
-
-    overflow: scroll;
     flex-shrink: 0;
     flex-grow: 0;
     flex-direction: column;
     z-index: 1;
-}
+    width:fit-content;
+  }
+  
 .gameBorder{
     display: flex;
-    border: 100px solid red;
-    left: 500px; top: 0; right: 80%;
-    border-bottom: 200px solid red;
+    border: 80px solid red;
+    border-bottom: 150px solid red;
     border-radius: 10%;
     margin: auto auto;
 }
@@ -109,8 +109,6 @@ html{
 }
 
 .eraser{
-    /* position: absolute;
-    transform: translate(0, 650px); */
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -121,7 +119,7 @@ html{
     border: 10px solid white;
     border-radius: 5%;
     text-align: center;
-    font-size:xx-large;
+    font-size:25px;
     text-transform: uppercase;
     white-space: nowrap;
     text-shadow: 1px 1px #ecbe03;
@@ -133,53 +131,47 @@ html{
 }
 
 .leftControls{
-    /* position: absolute;
-    transform: translate(-250px, 610px); */
-    border: 70px solid white;
+    border: 60px solid white;
     border-radius: 100%;
     box-shadow: 0 2px 18px 0 #ecbe03, 0 2px 50px 0 #ecbe03;
 }
 
 .rightControls{
-    /* border: 70px solid white; */
-    /* position: absolute; */
-    /* transform: translate(250px, 610px); */
-    border-radius: 100%;
-    /* box-shadow: 0 2px 18px 0 #ecbe03, 0 2px 50px 0 #ecbe03; */
+  border-radius: 100%;
 }
 .cell {
     background: white;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     margin: 0 auto;
     cursor: pointer;
 }
 
 .gridSize{
     display: flex;
-    flex-wrap: wrap;
     border-radius: 50%;
     padding: 10%;
-    height: 150px;
-    width: 150px;
+    height: 120px;
+    width: 120px;
     align-items: center;
     box-shadow: 0 2px 18px 0 #ecbe03, 0 2px 50px 0 #ecbe03;
     border: 0;
     cursor: pointer;
     font-family: Bradley Hand, cursive, sans-serif;
-    font-size: x-large;
+    font-size: 22px;
 }
 
 .bottomCont{
     position: absolute;
-    left: 25%; top: 80%; right: 25%; bottom: 0;
     display: flex;
-    flex-wrap: nowrap;
+    left: 25%; top: 80%; right: 25%; bottom: 5%;
     align-items: center;
-    gap: 100px;
-    margin: auto auto;
     justify-content: center;
+    gap:10%;
+    /* border: 3px solid yellow; */
 }
+
+
 /* FOOTER */
 .footer{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
