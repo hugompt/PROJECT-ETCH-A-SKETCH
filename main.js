@@ -1,3 +1,13 @@
+//On load of the page call a function to create the grid
+window.onload = function(){
+    if (localStorage.getItem("numbRows") ||
+            localStorage.getItem("numbColumns") == undefined){
+                newGrid(20,20);   
+    }else{
+        newGrid(localStorage.getItem("numbRows"),
+        localStorage.getItem("numbColumns")); 
+    }    
+}
 //Function to create the default grid with JS
 function newGrid(columns,rows){
 
@@ -66,16 +76,6 @@ function gridSizePrompt(){
   console.log($(gridSize));
   
 }
-//On load of the page call a function to create the grid
-window.onload = function(){
-    if (localStorage.getItem("numbRows") ||
-            localStorage.getItem("numbColumns") == undefined){
-                newGrid(20,20);   
-    }else{
-        newGrid(localStorage.getItem("numbRows"),
-        localStorage.getItem("numbColumns")); 
-    }    
-}
 
 //Check is page is ready to run code
 $(document).ready(function(){
@@ -101,6 +101,7 @@ $(document).ready(function(){
         }
     });
 
+    //Make all the grid white again
     $('.eraser').on('mousedown', (function(){
         $('.cell').css('background-color', 'white');
     }));
